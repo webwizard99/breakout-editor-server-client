@@ -1,5 +1,8 @@
 const passport = require('passport');
 
+
+// require('../google1370dc3b6669530c.html');
+
 module.exports = (app) => {
   app.use(
     '/auth/google',
@@ -26,8 +29,6 @@ module.exports = (app) => {
     res.send(req.user);
   });
 
-  app.get('/google1370dc3b6669530c.html', (req, res) => {
-    res.redirect('../google1370dc3b6669530c.html');
-  });
+  
 
 }

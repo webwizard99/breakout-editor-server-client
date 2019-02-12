@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const keys = require('./config/keys');
+const path = require('path');
 
 require('./models/User');
 require('./services/passport');
@@ -22,6 +23,12 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require('./routes/authRoutes')(app);
+
+app.get('/google1370dc3b6669530c.html', (req, res) => {
+  // res.send('../google1370dc3b6669530c.html');
+  // res.redirect('./google1370dc3b6669530c.html');
+  res.sendFile(path.join(__dirname + '/google1370dc3b6669530c.html'));
+});
 
 const PORT = process.env.PORT || 5000;
 

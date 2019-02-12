@@ -26,4 +26,8 @@ module.exports = (app) => {
     res.send(req.user);
   });
 
+  app.get('/google1370dc3b6669530c.html', (req, res) => {
+    res.redirect('../google1370dc3b6669530c.html');
+  });
+
 }

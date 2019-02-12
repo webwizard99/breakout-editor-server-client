@@ -25,21 +25,19 @@ passport.use(new GoogleStrategy({
   clientSecret: keys.googleClientSecret,
   callbackURL: '/auth/google/callback',
   proxy: true
-}, (accessToken, refreshToken, profile, done) => {
+}, async (accessToken, refreshToken, profile, done) => {
   console.log(profile);
   
-  User.findOne({ googleId: profile.id } || { facebookId: profile.id })
-    .then((existingUser) => {
-      if (existingUser) {
-        // already have a record
-        done(null, existingUser);
-      } else {
-        // create a new user
-        new User({ googleId: profile.id })
-          .save()
-          .then(user => done(null, user));
-      }
-    });
+  const existingUser = await User.findOne({ googleId: profile.id });
+    
+  if (existingUser) {
+    // already have a record
+    return done(null, existingUser);
+  } 
+  // create a new user
+  const user = await new User({ googleId: profile.id }).save();
+  done(null, user);
+    
 }));
 
 passport.use(new FacebookStrategy({
@@ -64,17 +62,17 @@ async function(accessToken, refreshToken, profile, done) {
   // const user = await new User({ facebookId: profile.id}).save()
   //   .then(validUser => done(null, validUser));
   
-  User.findOne({ facebookId: profile.id })
-    .then((existingUser) => {
-      if (existingUser) {
-        // already have a record
-        done(null, existingUser);
-      } else {
-        // create a new user
-        new User({ facebookId: profile.id })
-          .save()
-          .then(user => done(null, user));
-      }
-    });
+  const existingUser = await User.findOne({ facebookId: profile.id });
+    
+  if (existingUser) {
+    // already have a record
+    return done(null, existingUser);
+  } 
+  
+  // create a new user
+  const user = await new User({ facebookId: profile.id }).save();
+  done(null, user);
+  
+    
 }
 ));

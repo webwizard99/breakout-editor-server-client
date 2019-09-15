@@ -25,9 +25,13 @@ app.use(passport.session());
 require('./routes/authRoutes')(app);
 
 if (process.env.NODE_ENV === 'production') {
+  console.log('production code in index.js on server');
   app.use(express.static('client/build'));
 
+  console.log('app.user(express.static...');
+
   const path = require('path');
+  console.log(path.resolve(__dirname, 'client', 'build', 'index.html'));
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });

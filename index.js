@@ -23,7 +23,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require('./routes/authRoutes')(app);
-
+console.log(process.env.NODE_ENV);
 if (process.env.NODE_ENV === 'production') {
   console.log('production code in index.js on server');
   app.use(express.static('client/build'));

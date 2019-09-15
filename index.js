@@ -26,10 +26,14 @@ require('./routes/authRoutes')(app);
 console.log(process.env.NODE_ENV);
 if (process.env.NODE_ENV === 'production') {
   console.log('production code in index.js on server');
+  // Express will serve up production assets
+  // like our main.js file, or main.css file
   app.use(express.static('client/build'));
 
   console.log('app.user(express.static...');
 
+  // Express will serve up the index.html file
+  // if it doesn't recognize the route
   const path = require('path');
   console.log(path.resolve(__dirname, 'client', 'build', 'index.html'));
   app.get('*', (req, res) => {

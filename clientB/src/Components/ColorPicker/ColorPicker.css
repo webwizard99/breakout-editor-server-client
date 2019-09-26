@@ -1,0 +1,28 @@
+.ColorPicker {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.UIComponentsContainer {
+  padding: 0.2rem;
+  width: 12rem;
+  box-shadow: 1px 1px 3px rgba(30, 30, 30, .6);
+}
+
+.SaturationContainer {
+  width: 12rem;
+  height: 8rem;
+  position: relative;
+  margin-top: .3rem;
+}
+
+.HueContainer {
+  width: 12rem;
+  height: .6rem;
+  margin-top: .2rem;
+  position: relative;
+}

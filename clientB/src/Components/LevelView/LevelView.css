@@ -1,0 +1,32 @@
+.LevelView {
+    /* height: 66vh; */
+    width: 67vw;
+    background: rgb(60, 60, 60);
+    padding: 0;
+    margin: 0;
+    /* padding-top: 6px;
+    padding-left: 6px; */
+    overflow: hidden;
+    border: 1px solid rgba(30, 30, 30, .6);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.ViewRow {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.LevelViewCanvas {
+    background: rgb(230,230,250);
+}
+
+.DummyLevelView {
+  background: rgb(230,230,250);
+  margin: 0;
+  padding: 0;
+}

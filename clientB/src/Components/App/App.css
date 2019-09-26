@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(100, 100, 100);
+    color: rgba(250, 250, 250, .95);
+}
+
+.ViewColumn {
+    width: 66vw;
+    flex-basis: 600px;
+    height: 100%;
+}
+

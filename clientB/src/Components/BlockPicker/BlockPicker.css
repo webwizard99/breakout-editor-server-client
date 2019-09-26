@@ -1,0 +1,65 @@
+.BlockPicker {
+    width: 35%;
+    height: 100%;
+    /* position: relative;
+    top: 1rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.PickerView {
+    /* width: 90%;
+    height: 90%; */
+    background: rgb(230,230,250);
+    
+}
+
+.Eyedrop-indicator {
+  width: 100%;
+  margin-top: 0.4rem;
+  display: flex;
+  padding: 0.2rem;
+  box-shadow: 1px 1px 3px rgba(30, 30, 30, .6);
+}
+
+.Shift {
+  border: 1px solid rgba(240, 245, 250, 0.9);
+  padding: 2px;
+  width: 3rem;
+}
+
+.Cursor {
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-left: 0.6rem;
+  background: url('./cursor.svg');
+  background-size: cover;
+  overflow: hidden;
+}
+
+.toolWindow {
+  height: 1.4rem;
+  width: 1.2rem;
+  margin-left: 1.4rem;
+  padding-left: 1.2rem;
+  border: 1px solid rgba(30, 30, 30, .7);
+}
+
+.Eyedrop {
+  background: url('./eyedropper-64\ \(1\).png'),rgb(80, 80, 80);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 48%;
+  overflow: hidden;
+}
+
+.Eraser {
+  background: url('./eraser.svg'),rgb(80, 80, 80);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 38%;
+  overflow: hidden;
+}

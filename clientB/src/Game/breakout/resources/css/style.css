@@ -1,0 +1,105 @@
+/* Universal Styles */
+* { 
+    padding: 0;
+    margin: 0;
+}
+
+.canvas-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.canvas {
+  margin: auto;
+}
+
+#Canvas-background {
+    background: rgb(230,230,250);
+    display: block;
+    
+}
+
+#Canvas-player, #Canvas-blocks, #Canvas-hud, #Canvas-effects {
+  background: none;
+  display: block;
+  border: none;
+  box-shadow: none;
+}
+
+#Canvas-effects {
+  box-shadow: 1px 1px 15px rgba(30, 30, 30, .4);
+  border: 1px solid rgba(30, 30, 30, .6);
+}
+
+#mainContainer {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(0.1turn, rgb(180, 140, 140), rgb(140, 140, 180));
+    overflow: hidden;
+}
+
+#title {
+    color: rgba(245, 140, 180, .98);
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-family: 'Bungee', cursive;
+
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(30, 30, 30, .8),
+                -1px 1px 2px rgba(30, 30, 30, .8),
+                1px -1px 2px rgba(30, 30, 30, .8),
+                -1px -1px 2px rgba(30, 30, 30, .8);
+}
+
+#score, #highScore {
+    font-family: sans-serif;
+    color: rgb(252, 252, 252);
+    font-size: 3rem;
+    font-weight: 800;
+    padding-top: .4rem;
+    display: flex;
+    justify-content: center;
+    width: 12rem;
+    text-shadow: 1px 1px rgba(30, 30, 30, .4),
+                -1px 1px rgba(30, 30, 30, .4),
+                1px -1px rgba(30, 30, 30, .4),
+                -1px -1px rgba(30, 30, 30, .4);
+}
+
+#scoreFrame {
+    font-size: 2.5rem;
+    font-weight: 600;
+    width: 620px;
+    height: 6rem;
+    margin: -15px;
+    margin-left: 30vw;
+    padding-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#highScore {
+    color: rgb(132, 162, 202);
+    
+}
+
+
+#LivesView {
+    display: flex;
+    flex-wrap: wrap;
+    
+    height: 8rem;
+    width: 40vw;
+    margin:auto;
+}
+
+.life {
+    margin-right: 1rem;
+    padding: 4px;
+    box-shadow: 1px 1px 8px rgba(30, 30, 30, .4);
+}
